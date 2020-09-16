@@ -1,0 +1,5 @@
+URL = "https://www.petsonic.com/snacks-huesos-para-perros/"
+FILE_NAME = "/home/vorob/Desktop/task/huesos-parser/data/file"
+NAME = "//a[@class='product-name']/@title"
+IMAGE = "//img[@width='250']/@src"
+PRICE = "//span[@class='price product-price']"
