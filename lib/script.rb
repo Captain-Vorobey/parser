@@ -23,7 +23,7 @@ end
 parser = Parser.new(array.arr_to_file(array))
 parser.run(ARGV)
 
-puts "The file is written!"
+puts "The file is written!!!!!"
 
 #add all ul-list from https://www.petsonic.com/snacks-huesos-para-perros/?p=2 and make xpath '?p=2'
 
