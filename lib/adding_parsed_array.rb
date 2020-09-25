@@ -18,13 +18,27 @@ class AddingParsedArray
         puts items_count = @doc.xpath("//img[@width='250']/@src").size
     end
 
-    def push_to_products
+    def self.push_to_products
         product = ProductParser.new(NAME, PRICE, IMAGE, doc)
                 
-        product_name = product.get_name(NAME, doc) # обернуть в класс
+        product_name = product.get_name(NAME, doc) 
         product_cost = product.get_price(PRICE, doc)
         product_image = product.get_img(IMAGE, doc)
 
         products.push(ProductParser.new(product_name, product_cost, product_image, doc))
+    end
+
+    def self.push_to_product(arr)
+
+        for item in arr
+            product = ProductParser.new(NAME, PRICE, IMAGE, item)
+                
+        product_name = product.get_name(NAME, item) 
+        product_cost = product.get_price(PRICE, item)
+        product_image = product.get_img(IMAGE, item)
+
+        products.push(ProductParser.new(product_name, product_cost, product_image, doc))
+        end
+        products
     end
 end
